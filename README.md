@@ -16,24 +16,27 @@ Refer [here](https://en.wikipedia.org/wiki/Coefficient_of_inbreeding#Iterated_si
 
 > A raw genetic DNA data kit file used for genealogical research.
 
-Supported DNA kit file formats:
-* Ancestry.com (array v2, converter v1)
-* MyHeritage.com (format v1)
-* 23andMe.com
-* __TODO__: [test more formats](https://github.com/R055A/dna-inbred-estimate/issues/1)
+## Build
+
+```sh
+cargo build
+```
+
+## Format
+
+```sh
+cargo fmt --all
+cargo clippy --all-targets
+```
 
 ## Install
 
-```bash
-pip install -r requirements.txt
-```
-
-```bash
-python utils/install_plink.py
+```sh
+cargo run -- --install-plink
 ```
 
 ## Run
 
-```bash
-python app.py -file <file-name> [OPTIONS]
+```sh
+cargo run -- [OPTIONS]
 ```

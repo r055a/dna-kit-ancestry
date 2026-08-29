@@ -1,0 +1,30 @@
+[package]
+name = "dna-kit-ancestry"
+version = "1.0.0"
+edition = "2024"
+rust-version = "1.99"
+description = "Compute F_ROH from raw genetic DNA data kit file using PLINK."
+license = "GPL-3.0-only"
+
+[dependencies]
+bzip2 = "0.6.1"
+clap = { version = "4.6.7", features = ["derive"] }
+csv = "1.4"
+encoding_rs_io = "0.1"
+flate2 = "1"
+lzma-rust2 = "0.24"
+serde = { version = "1", features = ["derive"] }
+serde_json = "1"
+sha2 = "0.11.1"
+tar = "0.4"
+tempfile = "3"
+thiserror = "2.0.21"
+ureq = { version = "3.5", default-features = false, features = ["rustls", "platform-verifier"] }
+zip = { version = "9", default-features = false, features = ["deflate", "aes-crypto", "bzip2", "zstd", "lzma", "xz"] }
+zstd = "0.14.3"
+
+[lints.rust]
+unsafe_code = "forbid"
+
+[lints.clippy]
+all = "warn"
